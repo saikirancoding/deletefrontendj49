@@ -1,0 +1,50 @@
+<!--
+<div class="container">
+
+    <h2>ngFor learning</h2>
+
+    <ol>
+        <li *ngFor="let c of city">{{c}}</li>
+    </ol>
+
+    <div  *ngFor="let c of city;let i=index">
+        <h2>{{i+1}}{{c}}</h2>
+    </div>
+</div>
+-->
+
+<div class="container">
+
+    <p *ngFor="let u of user">{{u.userId}} {{u.userName}} {{u.userPayment}}</p>
+
+</div>
+
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Sr.No</th>
+        <th scope="col">Title</th>
+        <th scope="col">Director</th>
+        <th scope="col">Cast</th>
+        <th scope="col">RealseDate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movie of movies;let i=index">
+        <td>{{i+1}}</td>
+        <td>{{movie.title}}</td>
+        <td>{{movie.director}}</td>
+        <td>{{movie.cast}}</td>
+        <td>{{movie.releaseDate}}</td>
+      </tr>
+      </tbody>
+      </table>
+
+      <div class="card" style="width: 18rem;">
+        <img src="" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+        {{movie.title}} {{movie.director}}
+        </div>
+      </div>
